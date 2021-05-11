@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>코어브릿지</title>
+		
+		<style>
+@import url(/css/style.css);
+@import url(/css/font.css);
+
+body {
+    background: url(/img/bridge.jpg) no-repeat center;
+    background-size: cover;
+}
+
+section {
+    position: relative;
+    padding: 20px 0;
+}
+
+span.button {
+    display: inline-block;
+    padding: 1em;
+    border: 2px solid #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/**회사소개 section**/
+section.about {
+    color: #fefefe;
+    text-align: center;
+    background: url(/img/water_lily.png) no-repeat center;
+    background-size: cover;
+}
+
+section.about img {
+    width: 100%; margin: 0 auto;
+    max-width: 800px;
+    display: block;
+}
+
+/**사업분야 section**/
+section.business {
+    background: #fefefa url(/img/icon_business.png) no-repeat top right;
+    background-size: 400px;
+}
+
+section.business img{
+    width: 100%; margin: 10px auto;
+    max-width: 600px;
+    display: block;
+}
+
+/**소프트웨어 section**/
+section.software {
+    background-color: #1e3932;
+    color: #fefefe;
+}
+
+section.software p {
+    font-size: 2em;
+    padding: 0.5em;
+    position: relative;
+}
+
+section.software .button {
+    position: absolute; top: 50%; right: 0;
+    transform: translateY(-50%);
+}
+
+section.software p:not(:last-of-type) {
+    border-bottom: 1px solid #4b615b;
+}
+
+section.software p span {
+    font-size: 0.8em;
+}
+
+/**cems section**/
+section.cems {
+    background: url(/img/bg_software.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+}
+
+section.cems::before {
+    position: absolute; inset: 0 0 0 0;
+    background: rgba(255, 255, 255, 0.8);
+    content: "";
+}
+
+section.cems >div {
+    flex: 1;
+    z-index: 9;
+    font-size: 1.2em;
+}
+
+section.cems span.check {
+    padding-left: 2em;
+    position: relative;
+}
+
+section.cems span.check::before {
+    font-family: "font awesome";
+    content: "\f00c";
+    color: #00ff00;
+    position: absolute; left: 0;
+}
+
+section.cems ul {
+    list-style-type: square;
+    line-height: 2;
+}
+
+section.cems img {
+    max-width: 300px;
+    display: block;
+}
+
+section.cems >div:first-of-type img {
+    width: 100%; margin: 0 auto;
+}
+
+section.cems >div:first-of-type img:nth-child(1) {
+    transform: rotate(10deg);
+}
+
+section.cems >div:first-of-type img:nth-child(2) {
+    transform: rotate(-20deg);
+}
+
+section.cems >div:first-of-type img:nth-child(3) {
+    transform: rotate(0deg);
+}
+
+section.cems >div:first-of-type img:nth-child(4) {
+    transform: rotate(-10deg);
+}
+
+ul {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+a:visited,
+a:active,
+a:link {
+    color: inherit;
+    text-decoration: initial;
+}
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <iframe src="/header.html"></iframe>
+            </div>
+        </header>
+        <section class="about">
+            <h1>
+                코어브릿지는 고객과 함께 상생하는 기업을 지향하며,<br>
+                힘차게 달려가고 있습니다.
+            </h1>
+            <img src="/img/history.png">
+            <span class="button">회사소개</span>
+        </section>
+        <section class="business">
+            <img src="/img/tsp.png">
+            <img src="/img/sales.png">
+            <img src="/img/consulting.png">
+            <img src="/img/maintenance.png">
+            <img src="/img/software.png">
+        </section>
+        <section class="software">
+            <div class="container">
+                <p>
+                    <b>CeMS</b> :: Corebridge Enterprise Management System<br>
+                </p>
+                <p>
+                    <span>코어브릿지가 개발하는 기업 네트워크 및 시스템 관제 솔루션 입니다.</span><br>
+                    <span>무료 버전을 경험해 보세요.</span>
+                    <span class="button"><a href="http://free.corebrg.com" target="_blank">Free</a></span>
+                </p>
+            </div>
+        </section>
+        <section class="cems">
+            <div>
+                <img src="/img/dash_basic.png">
+                <img src="/img/dash_rack.png">
+                <img src="/img/dash_map.png">
+                <img src="/img/dash_top.png">
+            </div>
+            <div>
+                <ul>
+                    <li>Java 응용프로그램으로 제공됩니다.</li>
+                    <li>UI는 HTML5 표준을 준수합니다.</li>
+                    <li>Java embeded DB를 사용하므로 설치가 용이하고<br>
+                        고성능 입니다.</li>
+                    <li>사용자 경험 (UX) 을 최대한 반영하였습니다.</li>
+                    <li>다양한 대시보드를 지원합니다.<br>
+                        <span class="check">토폴로지</span><br>
+                        <span class="check">3D 데이터센터</span><br>
+                        <span class="check">성능 Top10</span><br>
+                        <span class="check">카카오맵</span>
+                    </li>
+                    <li>조작이 편리하고 강력한 차트를 제공합니다.<br>
+                        <img src="/img/dash_chart.png">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <iframe src="/footer.html"></iframe>
+            </div>
+        </footer>
+        <script>
+        </script>
+    </body>
+</html>
