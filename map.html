@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>코어브릿지</title>
+		
+		<style>
+@import url(/css/style.css);
+@import url(/css/font.css);
+
+table {
+    flex: none;
+    border-collapse:collapse;
+    border-spacing: 1em;
+    margin: 1em;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-family: "font awesome";
+}
+
+th,
+td {
+    padding: 1em;
+}
+
+label {
+    display: block;
+    padding: 0.5em;
+}
+
+#map {
+    height: 500px;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <iframe src="/header.html"></iframe>
+            </div>
+        </header>
+        <main class="container">
+            <h1>
+                찾아오시는길
+            </h1>
+            <table>
+                <tr>
+                    <th>
+                        <span>&#xf1ad;</span>
+                        회사명</td>
+                    <td>주식회사 코어브릿지</td>
+                </tr>
+                <tr>
+                    <th>
+                        <span>&#xf3c5;</span>
+                        주소</td>
+                    <td>경기도 안양시 동안구 시민대로 327번길 7 대명글로벌비즈스퀘어 501</td>
+                </tr>
+                <tr>
+                    <th>
+                        <span>&#xf879;</span>
+                        대표번호</td>
+                    <td>02-6956-7740</td>
+                </tr>
+                <tr>
+                    <th>
+                        <span>&#xf1ac;</span>
+                        팩스번호</td>
+                    <td>070-8233-7888</td>
+                </tr>
+            </table>
+            <div class="container" id="map"></div>
+        </main>
+        <footer>
+            <div class="container">
+                <iframe src="/footer.html"></iframe>
+            </div>
+        </footer>
+        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2d5f1506a806e98b9b51ecb765853bd7&libraries=services,clusterer"></script>
+        <script>
+try {
+    const
+        pos = new kakao.maps.LatLng(37.3965365395623, 126.966121951265),
+        map = new kakao.maps.Map(document.getElementById("map"), {
+            center: pos,
+            level: 3
+        }),
+        marker = new kakao.maps.Marker({
+            position: pos,
+            clickable: false
+            //image: new kakao.maps.MarkerImage("http://cems.corebrg.com/img/svg/idc.svg", new kakao.maps.Size(50, 40)),
+        }),
+        title = new kakao.maps.InfoWindow({
+            position : pos,
+            content : "<label>주식회사 코어브릿지<br>경기도 안양시 동안구 시민대로 327번길 7 대명글로벌비즈스퀘어 501</label>;"
+        });
+
+        marker.setMap(map);
+
+        title.open(map, marker);
+} catch (e) {console.trace(e);
+    throw "kakao.maps.Map exception";
+}
+        </script>
+    </body>
+</html>
