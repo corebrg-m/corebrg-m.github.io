@@ -2,14 +2,19 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>코어브릿지</title>
 		
 		<style>
 @import url(/css/style.css);
 @import url(/css/font.css);
 
+main {
+    padding: 1em;
+}
+
 table {
-    flex: none;
+    width: 100%;
     border-collapse:collapse;
     border-spacing: 1em;
     margin: 1em;
@@ -39,48 +44,46 @@ label {
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <iframe src="/header.html"></iframe>
-            </div>
-        </header>
+        <header></header>
         <main class="container">
             <h1>
                 찾아오시는길
             </h1>
             <table>
-                <tr>
-                    <th>
-                        <span>&#xf1ad;</span>
-                        회사명</td>
-                    <td>주식회사 코어브릿지</td>
-                </tr>
-                <tr>
-                    <th>
-                        <span>&#xf3c5;</span>
-                        주소</td>
-                    <td>경기도 안양시 동안구 시민대로 327번길 7 대명글로벌비즈스퀘어 501</td>
-                </tr>
-                <tr>
-                    <th>
-                        <span>&#xf879;</span>
-                        대표번호</td>
-                    <td>02-6956-7740</td>
-                </tr>
-                <tr>
-                    <th>
-                        <span>&#xf1ac;</span>
-                        팩스번호</td>
-                    <td>070-8233-7888</td>
-                </tr>
+                <colgroup>
+                    <col width="160px">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span>&#xf1ad;</span>
+                            회사명</td>
+                        <td>주식회사 코어브릿지</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>&#xf3c5;</span>
+                            주소</td>
+                        <td>경기도 안양시 동안구 시민대로 327번길 7 대명글로벌비즈스퀘어 501</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>&#xf879;</span>
+                            대표번호</td>
+                        <td>02-6956-7740</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>&#xf1ac;</span>
+                            팩스번호</td>
+                        <td>070-8233-7888</td>
+                    </tr>
+                </tbody>
             </table>
             <div class="container" id="map"></div>
         </main>
-        <footer>
-            <div class="container">
-                <iframe src="/footer.html"></iframe>
-            </div>
-        </footer>
+        <footer></footer>
+        <script src="/js/import.js"></script>
         <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2d5f1506a806e98b9b51ecb765853bd7&libraries=services,clusterer"></script>
         <script>
 try {

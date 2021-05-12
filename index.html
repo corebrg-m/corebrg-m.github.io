@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>코어브릿지</title>
 		
 		<style>
@@ -16,14 +17,6 @@ body {
 section {
     position: relative;
     padding: 20px 0;
-}
-
-span.button {
-    display: inline-block;
-    padding: 1em;
-    border: 2px solid #fefefe;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 /**회사소개 section**/
@@ -65,8 +58,7 @@ section.software p {
 }
 
 section.software .button {
-    position: absolute; top: 50%; right: 0;
-    transform: translateY(-50%);
+    float: right;
 }
 
 section.software p:not(:last-of-type) {
@@ -92,7 +84,7 @@ section.cems::before {
 
 section.cems >div {
     flex: 1;
-    z-index: 9;
+    position: relative;
     font-size: 1.2em;
 }
 
@@ -103,8 +95,9 @@ section.cems span.check {
 
 section.cems span.check::before {
     font-family: "font awesome";
+    font-size: inherit;
     content: "\f00c";
-    color: #00ff00;
+    color: #1e3932;
     position: absolute; left: 0;
 }
 
@@ -138,11 +131,6 @@ section.cems >div:first-of-type img:nth-child(4) {
     transform: rotate(-10deg);
 }
 
-ul {
-    list-style: none;
-    margin: 0; padding: 0;
-}
-
 a:visited,
 a:active,
 a:link {
@@ -150,21 +138,40 @@ a:link {
     text-decoration: initial;
 }
 
+@media all and (max-width: 520px) {
+    section.cems {
+        display: block;
+    }
+
+    section.cems >div {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+
+    section.software .button {
+        float: none;
+        width: 100%; box-sizing: border-box;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    section.about img,
+    section.cems img,
+    section.business img {
+        max-width: 100%;
+    }
+}
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <iframe src="/header.html"></iframe>
-            </div>
-        </header>
+        <header></header>
         <section class="about">
             <h1>
                 코어브릿지는 고객과 함께 상생하는 기업을 지향하며,<br>
                 힘차게 달려가고 있습니다.
             </h1>
             <img src="/img/history.png">
-            <span class="button">회사소개</span>
+            <span class="button"><a href="/company.html">회사소개</a></span>
         </section>
         <section class="business">
             <img src="/img/tsp.png">
@@ -211,11 +218,8 @@ a:link {
                 </ul>
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <iframe src="/footer.html"></iframe>
-            </div>
-        </footer>
+        <footer></footer>
+        <script src="/js/import.js"></script>
         <script>
         </script>
     </body>
