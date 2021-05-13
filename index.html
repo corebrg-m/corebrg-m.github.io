@@ -25,11 +25,12 @@ section.about {
     text-align: center;
     background: url(/img/water_lily.png) no-repeat center;
     background-size: cover;
+    padding: 20px 10px;
 }
 
 section.about img {
     width: 100%; margin: 0 auto;
-    max-width: 800px;
+    max-width: 1024px;
     display: block;
 }
 
@@ -41,7 +42,31 @@ section.business {
 
 section.business img{
     width: 100%; margin: 10px auto;
-    max-width: 600px;
+    max-width: 792px;
+    display: block;
+}
+
+/**axgate section**/
+section.axgate {
+    border-top: 1em solid #ff6e00;
+    border-bottom: 1em solid #ff6e00;
+    background-color: #ffffff;
+}
+
+section.axgate h1 {
+    font-size: 2em;
+    box-sizing: border-box;
+    color: #ff6e00;
+}
+
+section.axgate h1 img {
+    vertical-align: middle;
+    margin: 0 1em;
+}
+
+section.axgate div:last-of-type img{
+    width: 100%; margin: 0 auto;
+    max-width: 839px;
     display: block;
 }
 
@@ -157,6 +182,7 @@ a:link {
 
     section.about img,
     section.cems img,
+    section.axgate img,
     section.business img {
         max-width: 100%;
     }
@@ -167,8 +193,7 @@ a:link {
         <header></header>
         <section class="about">
             <h1>
-                코어브릿지는 고객과 함께 상생하는 기업을 지향하며,<br>
-                힘차게 달려가고 있습니다.
+                코어브릿지는 고객과 함께 상생하는 기업을 지향하며, 힘차게 달려가고 있습니다.
             </h1>
             <img src="/img/history.png">
             <span class="button"><a href="/company.html">회사소개</a></span>
@@ -179,6 +204,17 @@ a:link {
             <img src="/img/consulting.png">
             <img src="/img/maintenance.png">
             <img src="/img/software.png">
+        </section>
+        <section class="axgate">
+            <div>
+                <h1 class="container">
+                    <img src="/img/logo_axgate.png">
+                    AXGATE 파트너
+                </h1>
+            </div>
+            <div class="container">
+                <img src="https://www.axgate.com/home/wp-content/uploads/2017/08/product_01_img_01-6.jpg">
+            </div>
         </section>
         <section class="software">
             <div class="container">
